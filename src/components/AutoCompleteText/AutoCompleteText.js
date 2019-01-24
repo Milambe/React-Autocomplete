@@ -5,7 +5,7 @@ import myData from './data.json';
 export default class AutoCompleteText extends React.Component {
   constructor (props) {
     super(props);
-    console.log(myData) // it works
+    console.log(myData) // it works see navigator console
     this.items = [
       'Sofia',
       'Zupan',
