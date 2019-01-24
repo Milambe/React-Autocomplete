@@ -1,24 +1,14 @@
 import React from 'react';
 import './AutoCompleteText.scss';
+import myData from './data.json';
 
 export default class AutoCompleteText extends React.Component {
   constructor (props) {
     super(props);
-    fetch('./data.json')
-    .then(response => response.json())
-      .then(data => {
-      console.log(JSON.parse(data));
-      })
-    this.items = [
-      'Sofia',
-      'Zupan',
-      'Maxime',
-      'Maxence',
-      'Maximilian',
-      'Olivier',
-      'JB'
-    ];
+    console.log(myData) // it works see navigator console
+    this.items = myData;
     this.state = {
+      text: null,
       suggestions: [],
     };
 
@@ -29,15 +19,16 @@ export default class AutoCompleteText extends React.Component {
     let suggestions = [];
     if(value.length > 0) {
       const regex = new RegExp(`^${value}`,'i');
-      suggestions = this.items.sort().filter(v => regex.test(v));
+      suggestions = this.items.sort().filter((v, key) => regex.test(v.nom));
     }
-    this.setState(() => ({ suggestions, text: value }));
 
+    console.log(suggestions);
+    this.setState(() => ({ suggestions, text: value }));
   }
 
-  suggestionSelected(value) {
+  suggestionSelected(item) {
     this.setState(() => ({
-      text: value,
+      text: item.nom + ' ' + item.id,
       suggestions: [],
     }))
   }
@@ -49,7 +40,7 @@ export default class AutoCompleteText extends React.Component {
     }
     return (
       <ul>
-        {suggestions.map((item) => <li onClick={() => this.suggestionSelected(item)}>{item}</li>)}
+        {suggestions.map((item, key) => <li key={key} onClick={() => this.suggestionSelected(item)}>{item.nom}</li>)}
       </ul>
     );
 
