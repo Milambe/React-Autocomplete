@@ -4,34 +4,34 @@
     "nom": "AXA",
     "ville": "Marseille",
     "adresse": "13 rue général de gaulle",
-    "code_postal" : 13000,
+    "code_postal" : 13000
   },
   "B2000": {
     "id": "B2000",
     "nom": "Kernix",
     "ville": "Paris",
     "adresse": "6 rue lalandes",
-    "code_postal" : 75014,
+    "code_postal" : 75014
   },
   "C3000": {
     "id": "C3000",
     "nom": "Boulangerie Thevenin",
     "ville": "Paris",
     "adresse": "70 rue daguerre",
-    "code_postal" : 75014,
+    "code_postal" : 75014
   },
   "D3000": {
     "id": "D3000",
     "nom": "Boulangerie de Houilles City",
     "ville": "Houilles",
     "adresse": "90 Rue lavoisier",
-    "code_postal" : 78800,
+    "code_postal" : 78800
   },
-  "D3000": {
+  "D3001": {
     "id": "D3002",
     "nom": "Charcuterie de Houilles City",
     "ville": "Houilles",
     "adresse": "99 Rue lavoisier",
-    "code_postal" : 78800,
+    "code_postal" : 78800
   }
 }

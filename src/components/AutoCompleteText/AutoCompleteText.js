@@ -1,14 +1,11 @@
 import React from 'react';
 import './AutoCompleteText.scss';
+import myData from './data.json';
 
 export default class AutoCompleteText extends React.Component {
   constructor (props) {
     super(props);
-    fetch('./data.json')
-    .then(response => response.json())
-      .then(data => {
-      console.log(JSON.parse(data));
-      })
+    console.log(myData) // it works
     this.items = [
       'Sofia',
       'Zupan',
