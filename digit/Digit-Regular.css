@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "alarmclock";
+    src: url("Digit-Regular.eot");
+    src: url("Digit-Regular.eot?#iefix") format("embedded-opentype"),
+         url("Digit-Regular.woff2") format("woff2"),
+         url("Digit-Regular.woff") format("woff"),
+         url("Digit-Regular.ttf") format("ttf"),
+         url("Digit-Regular.svg#alarmclock") format("svg");
+    font-style: normal;
+    font-weight: 300;
+}
